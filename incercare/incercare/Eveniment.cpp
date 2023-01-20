@@ -23,16 +23,16 @@ Eveniment::Eveniment(const char* denumire, string data, string ora, int pret, Lo
 	this->ora = ora;
 	this->pret = pret;
 	this->locatie = &locatie;
-	locuriDisponibile = new int* [locatie.getNrRanduri()];
+	this->locuriDisponibile = new int* [locatie.getNrRanduri()];
 	for (int i = 0; i < locatie.getNrRanduri(); i++)
 	{
-		locuriDisponibile[i] = new int[locatie.getNrLocuri()];
+		this->locuriDisponibile[i] = new int[locatie.getNrLocuri()];
 	}
 	for (int i = 0; i < locatie.getNrRanduri(); i++)
 	{
 		for (int j = 0; j < locatie.getNrLocuri(); j++)
 		{
-			locuriDisponibile[i][j] = 0;
+			this->locuriDisponibile[i][j] = 0;
 		}
 	}
 }
@@ -44,7 +44,7 @@ Eveniment::~Eveniment()
 		delete[] this->denumire;
 		this->denumire = nullptr;
 	}
-   
+
 }
 
 char* Eveniment::getDenumire()
@@ -244,8 +244,9 @@ Eveniment::operator int()
 
 Eveniment& Eveniment:: operator+(int p)
 {
-	this->pret += p;
-	return *this;
+	Eveniment copie = *this;
+	copie.pret += p;
+	return copie;
 }
 
 void Eveniment::setLocOcupat(int rand, int loc)

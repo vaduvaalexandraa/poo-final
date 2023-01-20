@@ -1,3 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (incercare.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-  incercare.vcxproj -> C:\Users\exemp\source\repos\incercare\Debug\Proiect poo f.exe
+  Locatie.cpp
+C:\Users\exemp\Documents\GitHub\poo-final\incercare\incercare\Locatie.cpp(174): warning C4715: 'Locatie::getNrMaximLocuri': not all control paths return a value
+  incercare.vcxproj -> C:\Users\exemp\Documents\GitHub\poo-final\incercare\Debug\Proiect poo f.exe

@@ -29,7 +29,7 @@ Locatie::~Locatie()
 	if (this->denumireLocatie != nullptr)
 	{
 		delete[] this->denumireLocatie;
-		
+		this->denumireLocatie = nullptr;
 	}
 }
 
